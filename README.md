@@ -7,7 +7,7 @@ This is an implementation of a special kind of RNN which uses a 3-D external mem
 
 * **API**
 
-RNN-EM implements the Recurrent](http://keras.io/layers/recurrent/) api in Keras. RNN-EM requires 2 additional arguments:
+RNN-EM implements the [Recurrent](http://keras.io/layers/recurrent/) api in Keras. RNN-EM requires 2 additional arguments:
 **nb_slots**: `int`. Number of memory slots.
 **memory_size**: `int`. Size of each memory slot.
 
