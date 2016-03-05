@@ -11,6 +11,7 @@ RNN-EM implements the [Recurrent](http://keras.io/layers/recurrent/) api in Kera
 * **nb_slots**: `int`. Number of memory slots.
 * **memory_size**: `int`. Size of each memory slot.
 
+
  **Example**
 
 ```python
