@@ -5,14 +5,14 @@ Recurrent Neural Network with External Memory in Keras
 
 This is an implementation of a special kind of RNN which uses a 3-D external memory component to learn long range patterns in sequences. This is in contrast to LSTMs and GRUs which use 2-D hidden states. Though slower than LSTMs and GRUs, RNN-EMs can yield better results with lesser number of parameters.
 
- **API**
+**API**
 
 RNN-EM implements the [Recurrent](http://keras.io/layers/recurrent/) api in Keras. RNN-EM requires 2 additional arguments:
 * **nb_slots**: `int`. Number of memory slots.
 * **memory_size**: `int`. Size of each memory slot.
 
 
- **Example**
+**Example**
 
 ```python
 from keras.models import Sequential
