@@ -1,4 +1,4 @@
-from keras.layers.core import *
+from keras.layers import *
 from keras.activations import *
 from keras import backend as K
 from theano import tensor as T
@@ -97,5 +97,5 @@ class RNNEM(Recurrent):
 
 	def get_config(self):
 		config = {'output_dim': self.output_dim, 'nb_slots': self.nb_slots, 'memory_size': self.memory_size}
-        base_config = super(RNNEM, self).get_config()
-        return dict(list(base_config.items()) + list(config.items()))
+		base_config = super(RNNEM, self).get_config()
+		return dict(list(base_config.items()) + list(config.items()))
