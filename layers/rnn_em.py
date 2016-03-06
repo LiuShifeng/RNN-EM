@@ -83,14 +83,12 @@ class RNNEM(Recurrent):
 		#---------Memory write---------#
 		v = self.W_v(h)  # (nb_samples, memory_size)
 		v = K.repeat(v, 1)
-		#v = K.reshape(v, (-1, 1, self.memory_size))  # (nb_samples, 1, memory_size)
 		e = sigmoid(self.W_he(h))  # (nb_samples, nb_slots)
 		f = 1 - w * e  # (nb_samples, nb_slots)
 		f = K.repeat(f, self.memory_size)  # (nb_samples, memory_size, nb_slots)
 		f = K.permute_dimensions(f, (0, 2, 1))  # (nb_samples, nb_slots, memory_size)
 		u = w  # (nb_samples, nb_slots)
 		u = K.repeat(u, 1)
-		#u = K.reshape(-1, 1, self.nb_slots)  # (nb_samples, 1, nb_slots)
 		uv = T.batched_tensordot(u, v, axes=[(1), (1)])
 		M = M * f + uv
 		return y, [M, h, w]
